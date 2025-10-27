@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>michael french</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">   
+
+    <style>
+        .zig-zag-line {
+  width: 100%;
+  height: 1vw;
+  background-color: lightblue;
+  transition: 200ms;
+  }
+
+  body {
+    /* min-height: 100vh;  */
+    background: linear-gradient(309deg, rgba(183,119,219,1) 0%, rgba(137,104,205,1) 26%, rgba(137,104,205,1) 51%, rgba(95,31,228,1) 100%);
+    margin: 0;
+    padding: 0;
+    transition: 200ms;
+  }
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  h1 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 10vw;
+    letter-spacing: 0.01vw;
+    position: absolute;
+    left: -0.9vw;
+    top: 2.6vw;
+    color: white;
+    font-family: "Aldrich", sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 200ms;
+  }
+  
+  h2 {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 3.145vw;
+    right: -0.3vw;
+    top: -2.5vw;
+    color: white;
+    font-family: "Aldrich", sans-serif;
+    transition: 200ms;
+  }
+
+  h1:hover {
+    cursor: pointer;
+  }
+
+  h2:hover {
+    cursor: default;
+  }
+
+  .row1 {
+    /* background-color: red; */
+    height: 12.2vw;
+    width: 100%;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 200ms;
+  }
+  
+  .row2 {
+    /* background-color: blue; */
+    height: 3vw;
+    width: 100%;
+    position: relative;
+    transition: 200ms;
+    
+  }
+  
+  .spacer {
+    width: 100%;
+    height: 2vw;
+    /* background-color: green; */
+  }
+  
+  .row3 {
+    /* background-color: blue; */
+    height: 36.8vw;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.35fr 5fr .3fr 9fr 0.35fr;
+    transition: 200ms;
+  }
+
+  .row33 {
+    /*   background-color: blue; */
+      height: 36.8vw;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 0.35fr 9fr .3fr 5fr 0.35fr;
+      transition: 200ms;
+    }
+  
+  .side {
+    width: 100%;
+    height: 100%;
+    transition: 200ms;
+  /*   background-color: purple; */
+  }
+  
+  .box3 {
+    width: 100%;
+    height: 100%;
+    transition: 200ms;
+    /* margin-top: 2vw; */
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks elements vertically */
+    justify-content: center; /* Centers elements vertically */
+    transition: 200ms;
+    /* background-color: red; */
+  }
+
+  .box33 {
+    width: 100%;
+    height: 100%;
+    transition: 200ms;
+    /* margin-top: 2vw; */
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks elements vertically */
+    justify-content: center; /* Centers elements vertically */
+    transition: 200ms;
+    /* background-color: red; */
+  }
+  
+  .box4 {
+    width: 2vw;
+    height: 100%;
+    transition: 200ms;
+    /* background-color: orange; */
+  }
+  
+  h3 {
+    font-size: 3.145vw;
+    font-family: "Aldrich", sans-serif;
+    transition: 200ms;
+  }
+  
+  .box3 ul {
+    font-weight: 400;
+    font-size: 3.145vw;
+    position: relative;
+    line-height: 5vw;
+    color: white;
+    font-family: "Aldrich", sans-serif;
+    transition: 200ms;
+    padding-left: 1.5vw;
+    list-style-type: none
+  }
+
+  .paragraph p {
+    font-weight: 400;
+    font-size: 2.2vw;
+    /* left: 1.8vw; */
+    position: relative;
+    list-style-type: none;
+    line-height: 2.8vw;
+    color: white;
+    font-family: "Aldrich", sans-serif;
+    transition: 200ms;
+    margin-right: 0.4vw;
+    margin-left: 1.5vw;
+  }
+  
+  .button {
+    background-color: white;
+    height: 4vw;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 200ms;
+    border-top-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+  }
+  
+  .button:hover {
+    background-color: lightblue;
+    transition: 200ms;
+  }
+  
+  a {
+    color: #8968CD;
+    text-decoration: none;
+    font-family: "Aldrich", sans-serif;
+    transition: 200ms;
+  }
+
+  .button h3 {
+    position: relative;
+    left: 1.5vw;
+    font-size: 3.145vw;
+    top: 0.7vw;
+    transition: 200ms;
+  }
+
+  .button2 {
+    background-color: white;
+    height: 4vw;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 200ms;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    transition: 200ms;
+  }
+  
+  .button2:hover {
+    background-color: lightblue;
+    transition: 200ms;
+  }
+
+  .button2 h3 {
+    position: relative;
+    left: 1.5vw;
+    font-size: 3.145vw;
+    top: 0.7vw;
+    transition: 200ms;
+  }
+
+  .coding:hover {
+    /* color: lightblue; */
+    cursor: default;
+    transition: 200ms;
+  }
+
+  .coding:hover {
+    /* color: lightblue; */
+    cursor: default;
+    transition: 200ms;
+  }
+
+  .type:hover {
+    /* color: lightblue; */
+    cursor: default;
+    transition: 200ms;
+  }
+
+  .brand:hover {
+    /* color: lightblue; */
+    cursor: default;
+    transition: 200ms;
+  }
+
+  .ux:hover {
+    /* color: lightblue; */
+    cursor: default;
+    transition: 200ms;
+  }
+/* 
+  .licontainer:hover {
+    cursor: none;
+  } */
+  
+  .box5 {
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow;  */
+    display: flex; /* Enable flexbox for alignment */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+    overflow: hidden; /* Prevent any overflow from the image */
+    transition: 200ms;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+
+.box5 img {
+    height: auto; /* Fill the div vertically */
+    width: 100%; /* Adjust width to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image fills the container, potentially cropping the sides */
+    transition: 200ms;
+}
+
+.box55 {
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex; /* Enable flexbox for alignment */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+    overflow: hidden; /* Prevent any overflow from the image */
+    transition: 200ms;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+}
+
+.box55 img {
+    height: auto; /* Fill the div vertically */
+    width: 100%; /* Adjust width to maintain aspect ratio */
+    transition: 200ms;
+    object-fit: cover; /* Ensure the image fills the container, potentially cropping the sides */
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.spacer h3 {
+  font-size: 0.7vw;
+  margin-left:0vw;
+  position: static;
+  color: white;
+}
+
+.socials {
+  width: 25vw;
+  height: 100%;
+  /* background-color: green; */
+}
+
+.socials h2 {
+  position: absolute;
+  overflow: hidden;
+  font-size: 1.9vw;
+  color: white;
+  font-family: "Aldrich", sans-serif;
+  transition: 200ms;
+  left: 0;
+  top: -0.8vw;
+}
+
+.socials a {
+  
+    color: lightblue;
+    text-decoration: underline;
+  }
+
+h2, h3, p, a, span {
+    font-family: 'Aldrich', sans-serif;
+    font-weight: normal; 
+    letter-spacing: normal;
+}
+
+h2 {
+  letter-spacing: .015vw;
+}
+  
+  
+    </style>
+
+</head>
+<body>
+    <div class ="row1"><h1>michael french</h1></div>
+    <div class ="row2"><h2>communication design student portfolio</h2>
+        <div class = "socials"><h2>
+            <a href="mailto:michael@michaelfrench.co">contact</a> | <a href="https://www.instagram.com/michaelfrench.co/" target="_blank">instagram</a> | <a href="https://www.linkedin.com/in/michael-french-66b8b2169/" target="_blank">linkedin</a>
+          </h2></div>
+    </div> 
+    <div class ="spacer"></div>
+    <div class="zig-zag-line"></div>
+    <div class ="spacer"></div>
+    <div class ="row3">
+      <div class ="side"></div>
+      <div class ="box3">
+        <a href="work.html"><div class = "button"><h3>student work</h3></div></a>
+        <div class = "licontainer"><p><ul>
+            <li><div class = "ux">product design</div></li>
+            <li><div class = "type">typography</div></li>
+            <li><div class = "brand">branding</div></li>
+            <li><div class = "coding">creative coding</div></li>
+        </ul></p>
+            </div>
+      </div>
+      <div class ="box4"></div>
+      <div class ="box5"><img src="Portfolio/SquareMockup.jpg"></div>
+      <div class ="side"></div>
+    </div>
+    <!-- <div class ="spacer"></div> -->
+    <div class ="spacer"></div>  
+    
+    <div class="zig-zag-line"></div>
+    <div class ="spacer"></div>  
+
+    <div class ="row33">
+      <div class ="side"></div>
+      <div class ="box55"><img src="Portfolio/BookMockup.jpg"></div>
+      <div class ="box4"></div>
+      <div class ="box33">
+        <a href="https://www.linkedin.com/in/michael-french-66b8b2169/" target="_blank">
+            <div class = "button2"><h3>about me</h3></div></a>
+       <div class = "paragraph"> <p>i am a former science communicator + marine biologist turned graphic artist, currently pursuing my master’s degree  in communication design at parsons in nyc</p></div></div>
+      <div class ="side"></div>
+    </div>
+
+    <!-- <div class ="spacer"></div>  -->
+    <div class ="spacer"></div> 
+    
+    <div class="zig-zag-line"></div>
+    <div class ="spacer"></div> 
+    
+    <div class ="row3">
+      <div class ="side"></div>
+      <div class ="box33">
+        <a href="scicomms.html"><div class = "button"><h3>science comms</h3></div></a>
+        <div class = "paragraph"><p>prior to my design studies,<br>i spent four years working as director of social media at a boutique pr agency specializing in science communications for life science, biotech, + pharmaceutical companies</p></div>
+      </div>
+      <div class ="box4"></div>
+      <div class ="box5"><img src="Portfolio/SocialsMockup.gif"></div>
+      <div class ="side"></div>
+    </div>
+  <!-- <div class ="spacer"></div> -->
+  <div class ="spacer"></div>
+   
+    <div class="zig-zag-line"></div>
+    <div class ="spacer"></div>  
+
+    <div class ="row33">
+      <div class ="side"></div>
+      <div class ="box55"><img src="Portfolio/gchawksbill2 copy.jpg"></div>
+      <div class ="box4"></div>
+      <div class ="box33">
+        <a href="photography.html">
+            <div class = "button2"><h3>photography</h3></div></a>
+       <div class = "paragraph"> <p>my passion for underwater photography began at a young age and flourished during my time studying marine science and biology at the university of miami</p></div></div>
+      <div class ="side"></div>
+    </div>
+
+    <!-- <div class ="spacer"></div>  -->
+    <div class ="spacer"></div> 
+    <div class ="spacer">
+        <h3>site by michael french | mockup templates created by originalmockup on freepik</h3>
+    </div> 
+    <script>
+        const codingDiv = document.querySelector('.coding');
+        const typeDiv = document.querySelector('.type');
+        const brandDiv = document.querySelector('.brand');
+        const uxDiv = document.querySelector('.ux');
+        const box5Image = document.querySelector('.box5 img');
+
+        codingDiv.addEventListener('mouseenter', () => {
+            box5Image.src = "Portfolio/beyoncemockup2.jpg";
+        });
+
+        codingDiv.addEventListener('mouseleave', () => {
+            box5Image.src = "Portfolio/SquareMockup.jpg";
+        });
+
+        typeDiv.addEventListener('mouseenter', () => {
+            box5Image.src = "Portfolio/DoctorsMockup2.jpg";
+        });
+
+        typeDiv.addEventListener('mouseleave', () => {
+            box5Image.src = "Portfolio/SquareMockup.jpg";
+        });
+
+        brandDiv.addEventListener('mouseenter', () => {
+            box5Image.src = "Portfolio/BusinessCardMockup.jpg";
+        });
+
+        brandDiv.addEventListener('mouseleave', () => {
+            box5Image.src = "Portfolio/SquareMockup.jpg";
+        });
+
+        uxDiv.addEventListener('mouseenter', () => {
+            box5Image.src = "Portfolio/Rooted Mockup.jpg";
+        });
+
+        uxDiv.addEventListener('mouseleave', () => {
+            box5Image.src = "Portfolio/SquareMockup.jpg";
+        });
+
+        if (window.location.pathname.endsWith("index.html")) {
+    window.location.replace("/");
+  }
+    </script>
+</body>
+</html>
